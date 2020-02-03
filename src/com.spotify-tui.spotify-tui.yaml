@@ -1,0 +1,15 @@
+command: spt
+id: com.spotifyTui.spotify-tui
+modules:
+  - name: spt
+    sources:
+    - sha256: 71e8e962bc9175003e01de1da4aafeab66d6dd7f40511ce32d734646a98b3e04
+      type: file
+      url: https://github.com/Rigellute/spotify-tui/releases/download/v0.13.0/spotify-tui-linux.tar.gz
+    buildsystem: simple
+    build-commands: 
+      - "tar xvfz spotify-tui-linux.tar.gz"
+      - "install -D spt /app/bin"
+runtime: org.freedesktop.Platform
+runtime-version: '19.08'
+sdk: org.freedesktop.Sdk
